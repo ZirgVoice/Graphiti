@@ -93,6 +93,10 @@ public struct StarWarsAPI: API {
             Field("droid", at: StarWarsResolver.droid) {
                 Argument("id", at: \.id)
                     .description("Id of the droid.")
+                Argument("testInt", at: \.testInt)
+                    .defaultValue(1)
+                Argument("testBool", at: \.testBool)
+                    .defaultValue(false)
             }
 
             Field("search", at: StarWarsResolver.search, as: [SearchResult].self) {

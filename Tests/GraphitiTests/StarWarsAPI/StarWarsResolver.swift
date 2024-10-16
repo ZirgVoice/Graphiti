@@ -51,6 +51,8 @@ public struct StarWarsResolver {
 
     public struct DroidArguments: Codable {
         public let id: String
+        public let testInt: Int
+        public let testBool: Bool
     }
 
     public func droid(context: StarWarsContext, arguments: DroidArguments) -> Droid? {
